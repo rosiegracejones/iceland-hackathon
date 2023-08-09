@@ -24,7 +24,7 @@ const PrizePage = () => {
         <span className="mid"></span>
         <button id="spin" onClick={handleSpin}>
           Spin
-        </button>
+        </button> 
         <div className="stoper"></div>
       </body>
     </div>
