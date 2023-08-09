@@ -1,4 +1,4 @@
-[
+
     {"title": "100% cotton paper towels", "price": "8", "image": "src/assets/cottonpapertowels.jpg"},
     {"title": "Bio-D Laundry Liquid (Fragrence Free)", "price": "5", "image": "src/assets/Bio-D Laundry Liquid (Fragrence Free).jpg"},
     {"title": "Cheeky Panda Bamboo Kitcken Towel (pack of 2)", "price": "3", "image": "src/assets/Cheeky Panda Bamboo Kitcken Towel (pack of 2).jpg"},
@@ -9,4 +9,5 @@
     {"title": "Reusable Sandwich Wrap", "price": "6", "image": "src/assets/Reusable Sandwich Wrap.jpg"},
     {"title": "The Naked Shave Kit", "price": "18", "image": "src/assets/The Naked Shave Kit.png"},
     {"title": "Vegan Leather Lunch Bag", "price": "22", "image": "src/assets/vegan leather lunch bag.jpg"}
+
 ]
