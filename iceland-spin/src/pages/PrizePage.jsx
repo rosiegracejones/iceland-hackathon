@@ -3,8 +3,37 @@
 - Randomly select prize from array
 - Display prize
 - Add prize item to checkout list
-
 */
+
+const Wheel = () => {
+  const [rotation, setRotation] = useState(0);
+
+  const handleSpin = () => {
+    const randomNumber = Math.ceil(Math.random() * 10000);
+    setRotation(rotation + randomNumber);
+  };
+
+  return (
+    <div>
+      <title>Lucky Spin</title>
+      <body>
+        <div className="container"  onClick={handleSpin} style={{ transform: `rotate(${rotation}deg)` }}>
+          <div className="one">Like</div>
+          <div className="two">Comment</div>
+          <div className="three">Share</div>
+          <div className="four">Subscribe</div>
+          <div className="five">Support</div>
+          <div className="six">Visit</div>
+        </div>
+        <span className="mid"></span>
+        <button id="spin" onClick={handleSpin}>
+          Spin
+        </button> 
+        <div className="stoper"></div>
+      </body>
+    </div>
+  );
+};
 
 import "./PrizePage.css";
 
