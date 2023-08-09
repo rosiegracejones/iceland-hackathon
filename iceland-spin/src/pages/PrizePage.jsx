@@ -11,9 +11,9 @@ import "./PrizePage.css";
 export default function PrizePage({ prize, setPrize }) {
 	const data = [
 		{ name: "Vegan Ice Cream", type: "item", discount: 0, key: 1 },
-		{ name: "£100", type: "cash", discount: 0, key: 2 },
-		{ name: "Plant 20 trees", type: "item", discount: 0, key: 3 },
-		{ name: "free delivery", type: "delivery", discount: 0, key: 4 },
+    { name: "5% off", type: "discount", discount: 5, key: 2 },
+    { name: "£10 off", type: "discount", discount: 10, key: 3 },
+    { name: "£20 off", type: "discount", discount: 20, key: 4 },
 		{ name: "10% off", type: "discount", discount: 0.1, key: 5 },
 	];
 
