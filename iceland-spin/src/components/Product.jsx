@@ -1,19 +1,23 @@
 import './product.css';
 import useRandomizedProducts from "../hooks/UseRandomProducts";
-import { createContext, useState } from 'react';
+import { useEffect, useState } from 'react';
 import products from "../data/products.json";
-
+import PrizePage from '../pages/PrizePage';
 export default function Product( ) {
-
+    const [discount, setDiscount] = useState(0);
     const randomProducts = useRandomizedProducts(products);
     const [basket, setBasket] = useState([]);
+    
+    const total = basket.reduce((acc, product) => acc + Number(product.price), 0);
+    const [basketTotal, setBasketTotal] = useState(0);
 
-    // function ApplyDiscount() {
-    //     let discount = 0.1;
-    //     setBasketTotal(basketTotal - (discount * basketTotal));
-    //     console.log(basketTotal);
-    // }
+    useEffect(() => {
+    if (total > 0) {
+        setBasketTotal(total);
+    }
+    }, [total]);
 
+    console.log(basketTotal);
     function randomizeItems() {
         setBasket(randomProducts);
     }
@@ -23,8 +27,10 @@ export default function Product( ) {
         const newBasket = basket.filter((_, index) => index !== indexToRemove);
         setBasket(newBasket);
     }
-
-    const total = basket.reduce((acc, product) => acc + Number(product.price), 0);
+    
+    function ApplyDiscount() {
+        setBasketTotal(basketTotal - (discount * basketTotal));
+    }
 
     return (
         <>
@@ -41,10 +47,11 @@ export default function Product( ) {
                         )
                     })}
                 </div>
-                <div>
-                <p>Basket Total: £{total}</p>
+                <div className='basket'>
+                <p>Basket Total: £{basketTotal}</p>
                     <button onClick={randomizeItems}>Randomize basket</button>
-                    {/* <button onClick = {ApplyDiscount}> Apply discount</button> */}
+                    <button onClick={ApplyDiscount}>Apply Discount</button>
+                    <PrizePage discount={discount} setDiscount={setDiscount}/>
                 </div>
             </div>
         </>

@@ -8,9 +8,9 @@ import "./PrizePage.css";
 import { useState, useEffect} from "react";
 
 
-export default function PrizePage({ prize, setPrize }) {
+export default function PrizePage({ discount, setDiscount }) {
 	
-	
+    const [prize, setPrize] = useState("");
 
   const Wheel = (data) => {
 
@@ -25,8 +25,14 @@ export default function PrizePage({ prize, setPrize }) {
 
         console.log(random);
         
-        let name = data.data[random].name;
-  
+        let selection = data.data[random];
+
+        let name = selection.name;
+        
+        let discount = selection.discount;
+        console.log(discount);
+        
+        setDiscount(discount);
         setPrize(name);
         console.log(name)
   
@@ -62,12 +68,12 @@ export default function PrizePage({ prize, setPrize }) {
   };
   
   const data = [
-    { name: "Vegan Ice Cream", type: "item", discount: 0, key: 1, class:"one", },
-    { name: "5% off", type: "discount", discount: 5, key: 2, class:"two" },
-    { name: "£10 off", type: "discount", discount: 10, key: 3, class:"three"},
-    { name: "£20 off", type: "discount", discount: 20, key: 4, class:"four"},
-    { name: "10% off", type: "discount", discount: 0.1, key: 5, class:"five"},
-    { name: "£5 off", type: "discount", discount: 5, key: 6, class:"six"},
+    { name: "75% off", type: "discount", discount: 0.75, key: 1, class:"one" },
+    { name: "5% off", type: "discount", discount: 0.05, key: 2, class:"two" },
+    { name: "10% off", type: "discount", discount: 0.1, key: 3, class:"three"},
+    { name: "20% off", type: "discount", discount: 0.2, key: 4, class:"four"},
+    { name: "30% off", type: "discount", discount: 0.3, key: 5, class:"five"},
+    { name: "50% off", type: "discount", discount: 0.5, key: 6, class:"six"}
   ];
   
 
