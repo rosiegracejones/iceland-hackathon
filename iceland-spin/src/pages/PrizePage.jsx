@@ -8,7 +8,7 @@
 
 import "./PrizePage.css";
 
-export default function PrizePage(prize, setPrize) {
+export default function PrizePage({ prize, setPrize }) {
 	const data = [
 		{ name: "Vegan Ice Cream", type: "item", discount: 0, key: 1 },
 		{ name: "£100", type: "cash", discount: 0, key: 2 },
@@ -21,14 +21,14 @@ export default function PrizePage(prize, setPrize) {
 		let random = Math.floor(Math.random() * data.length);
 		let name = data[random].name;
 		console.log(name);
-    setPrize(name)
+		setPrize(name);
 		return `${name}`;
 	}
 
 	return (
 		<>
 			<button onClick={() => randomItem(data)}>Choose Random Prize</button>
-      <h1>{prize}</h1>
+			<h1>{prize}</h1>
 		</>
 	);
 }

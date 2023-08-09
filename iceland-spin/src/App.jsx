@@ -6,6 +6,7 @@ import { useState } from 'react'
 function App() {
 
   const [prize, setPrize] = useState("")
+  
   return (
     <>
       <CheckoutPage/>
