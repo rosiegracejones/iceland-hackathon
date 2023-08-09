@@ -1,21 +1,22 @@
 import Product from "../components/Product";
+import { useState } from "react";
 
-export default function CheckoutPage() {
+export default function CheckoutPage({prize}) {
+   
+    
     return (
         <div className="basket">
              <h1>Your Basket</h1>
        
-            <Product/>
-
+            <Product prize={prize}/>
          {/* <div className="quantity">
             <button className="plus-button" type="button" name="button">-</button>
             <input type="text" name="name" value="1"/>
             <button className="minus-button" type="button" name="button">+</button>
         </div> */}
-
+        <button onClick={() => randomItem(data)}>Choose Random Prize2</button>
+        
         </div>
     )
 }
       
-
-

@@ -9,7 +9,7 @@ function App() {
   
   return (
     <>
-      <CheckoutPage/>
+      <CheckoutPage prize={prize}/>
       <PrizePage prize={prize} setPrize={setPrize}/>
     </>
   )

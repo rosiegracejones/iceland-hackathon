@@ -1,11 +1,19 @@
 import './product.css';
 import useRandomizedProducts from "../hooks/UseRandomProducts";
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import products from "../data/products.json";
 
 export default function Product( ) {
+    const [basketTotal, setBasketTotal] = useState(0)
+
     const randomProducts = useRandomizedProducts(products);
     const [basket, setBasket] = useState([]);
+
+    function ApplyDiscount() {
+        let discount = 0.1;
+        setBasketTotal(basketTotal - (discount * basketTotal));
+        console.log(basketTotal);
+    }
 
     function randomizeItems() {
         setBasket(randomProducts);
@@ -18,7 +26,7 @@ export default function Product( ) {
     }
 
     const total = basket.reduce((acc, product) => acc + Number(product.price), 0);
-
+    setBasketTotal(total);
     return (
         <>
             <div className="product-container">
@@ -35,8 +43,9 @@ export default function Product( ) {
                     })}
                 </div>
                 <div>
+                <p>basketTotal = {basketTotal}</p>
                     <button onClick={randomizeItems}>Randomize basket</button>
-                    <h4>Total Cost: £{total}</h4>
+                    <button onClick = {ApplyDiscount}> Apply discount</button>
                 </div>
             </div>
         </>
