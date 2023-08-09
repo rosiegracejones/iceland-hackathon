@@ -1,0 +1,67 @@
+.prize-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .wheel {
+    width: 300px;
+    height: 300px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: transform 3s ease-in-out;
+  }
+  
+  .wheel.spinning {
+    animation: spin 3s linear infinite;
+  }
+  
+  .wheel-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wheel-section {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+  
+  .wheel-section div {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    transform-origin: 100% 100%;
+  }
+  
+  .section-0 { transform: rotate(0deg); }
+  .section-1 { transform: rotate(45deg); }
+  .section-2 { transform: rotate(90deg); }
+  .section-3 { transform: rotate(135deg); }
+  .section-4 { transform: rotate(180deg); }
+  .section-5 { transform: rotate(225deg); }
+  .section-6 { transform: rotate(270deg); }
+  .section-7 { transform: rotate(315deg); }
+
+  .section-0 { background-color: #ff4136; }
+.section-1 { background-color: #0074d9; }
+.section-2 { background-color: #2ecc40; }
+.section-3 { background-color: #ffdc00; }
+.section-4 { background-color: #ff851b; }
+.section-5 { background-color: #01ff70; }
+.section-6 { background-color: #7fdbff; }
+.section-7 { background-color: #f012be; }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  
