@@ -1,4 +1,12 @@
 [
-    {"title": "100% cotton paper towels", "price": "£8", "image": "../assets/100% cotton paper towels.jpg"}
-
+    {"title": "100% cotton paper towels", "price": "£8", "image": "src/assets/cottonpapertowels.jpg"},
+    {"title": "Bio-D Laundry Liquid (Fragrence Free)", "price": "£5", "image": "src/assets/Bio-D Laundry Liquid (Fragrence Free).jpg"},
+    {"title": "Cheeky Panda Bamboo Kitcken Towel (pack of 2)", "price": "£3", "image": "src/assets/Cheeky Panda Bamboo Kitcken Towel (pack of 2).jpg"},
+    {"title": "Ecoffee cup - bonfrer (340mls)", "price": "£7", "image": "src/assets/Ecoffee cup - bonfrer (340mls).jpeg"},
+    {"title": "Ecoforce Recyclable Multi-purpose Clothes (twin pack)", "price": "£9", "image": "src/assets/Ecoforce Recyclable Multi-purpose Clothes (twin pack).jpg"},
+    {"title": "Loofco Washing Up Pads", "price": "£5.50", "image": "src/assets/Loofco Washing Up Pads.jpg"},
+    {"title": "Organicup Menstrual Cup", "price": "£14", "image": "src/assets/Organicup Menstrual Cup.jpg"},
+    {"title": "Reusable Sandwich Wrap", "price": "£6", "image": "src/assets/Reusable Sandwich Wrap.jpg"},
+    {"title": "The Naked Shave Kit", "price": "£18", "image": "src/assets/The Naked Shave Kit.png"},
+    {"title": "Vegan Leather Lunch Bag", "price": "£22", "image": "src/assets/vegan leather lunch bag.jpg"}
 ]
