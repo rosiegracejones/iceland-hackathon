@@ -4,16 +4,15 @@ import { createContext, useState } from 'react';
 import products from "../data/products.json";
 
 export default function Product( ) {
-    const [basketTotal, setBasketTotal] = useState(0)
 
     const randomProducts = useRandomizedProducts(products);
     const [basket, setBasket] = useState([]);
 
-    function ApplyDiscount() {
-        let discount = 0.1;
-        setBasketTotal(basketTotal - (discount * basketTotal));
-        console.log(basketTotal);
-    }
+    // function ApplyDiscount() {
+    //     let discount = 0.1;
+    //     setBasketTotal(basketTotal - (discount * basketTotal));
+    //     console.log(basketTotal);
+    // }
 
     function randomizeItems() {
         setBasket(randomProducts);
@@ -26,7 +25,7 @@ export default function Product( ) {
     }
 
     const total = basket.reduce((acc, product) => acc + Number(product.price), 0);
-    setBasketTotal(total);
+
     return (
         <>
             <div className="product-container">
@@ -43,9 +42,9 @@ export default function Product( ) {
                     })}
                 </div>
                 <div>
-                <p>basketTotal = {basketTotal}</p>
+                <p>Basket Total: £{total}</p>
                     <button onClick={randomizeItems}>Randomize basket</button>
-                    <button onClick = {ApplyDiscount}> Apply discount</button>
+                    {/* <button onClick = {ApplyDiscount}> Apply discount</button> */}
                 </div>
             </div>
         </>
