@@ -1,7 +1,13 @@
-export default function PrizePage() {
+import Product from "../components/Product";
+
+export default function CheckoutPage() {
     return (
         <>
-            <h1>Checkout Page</h1>
+            <h1>Your Basket</h1>
+            <Product />
         </>
     )
 }
+
+
+
